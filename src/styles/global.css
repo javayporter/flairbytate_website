@@ -130,6 +130,14 @@ a {
     /* font-size: 30px !important; smaller icon size on mobiles */
     display: none;
   }
+
+  .nav-button.left {
+    display: none;
+  }
+
+  .nav-button.right {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -501,9 +509,12 @@ a {
   flex: 1;
   min-width: 300px;
   max-height: 500px;
+  max-width: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+  box-sizing: border-box;
 }
 
 /* Optional: subtle scroll bar for luxe feel */
@@ -523,6 +534,10 @@ a {
     align-items: center;
     text-align: center;
     padding: 0 1rem;
+  }
+
+  .hero-gallery-section {
+    padding: 0;
   }
 
   .animated-quote {
