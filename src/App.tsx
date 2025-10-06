@@ -4,6 +4,7 @@ import Jumbotron from "./components/Jumbotron";
 import ServiceCard from "./components/ServiceCard";
 import ContactSection from "./components/ContactSection";
 import ImageSlider from "./components/ImageSlider";
+// import BrandPillars from "./components/BrandPillars";
 import { services } from "./data/services";
 
 const App: React.FC = () => {
@@ -11,6 +12,7 @@ const App: React.FC = () => {
     <>
       <Navbar />
       <main className="container" style={{ marginTop: "1.75rem" }}>
+        {/* <BrandPillars /> */}
         <Jumbotron />
         <section id="home">
           <ImageSlider />

@@ -1,6 +1,21 @@
+:root {
+  --heading-font: "Inter", sans-serif;
+  --body-font: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
 body {
   margin: 0;
-  font-family: "Helvetica Neue", sans-serif;
+  /* font-family: "Helvetica Neue", sans-serif; */
+  font-family: var(--body-font);
   color: #222;
   /* background-color: #673147; */
 }
@@ -289,4 +304,36 @@ a {
 
 .nav-button.right {
   margin-left: 1rem;
+}
+
+.brand-pillars-section {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5; /* light backdrop that feels clean */
+  text-align: center;
+}
+
+.brand-pillars-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.brand-pillars-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: var(--heading-font); /* Inter */
+  font-weight: 600;
+  color: #008080; /* Luxe accent */
+}
+
+.brand-pillars-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
