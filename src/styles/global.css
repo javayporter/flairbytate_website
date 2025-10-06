@@ -104,6 +104,37 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .video-slider-wrapper {
+    gap: 0.5rem;
+  }
+  .slider-video {
+    max-width: 90vw; /* 90% of viewport width on smaller devices */
+  }
+  .nav-button {
+    font-size: 30px !important; /* smaller icon size on mobiles */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-video {
+    max-width: 100vw; /* full width on very small devices */
+    border-radius: 5px;
+  }
+  .nav-button {
+    font-size: 24px !important;
+    margin: 0 0.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .headshot-photo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* ensure it's a block-level element to center with margin auto */
+  }
+}
+
 /* Jumbotron */
 .jumbotron {
   display: flex;
@@ -204,10 +235,14 @@ a {
 }
 
 .video-slider-wrapper {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  max-width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .slider-video {
@@ -217,21 +252,29 @@ a {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: all 0.4s ease;
+  /* width: 100%;
+  max-width: 700px; /* max size on large screens */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .nav-button {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  font-size: 1.5rem;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
-  transition: background 0.3s ease;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
 }
 
 .nav-button:hover {
   background-color: #f0f0f0;
+  transform: scale(1.1);
 }
 
 .navbar.center-logo {
@@ -239,4 +282,11 @@ a {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+.nav-button.left {
+  margin-right: 1rem;
+}
+
+.nav-button.right {
+  margin-left: 1rem;
 }

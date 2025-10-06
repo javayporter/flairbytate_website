@@ -16,7 +16,11 @@ const aboutTextp3 =
 const Jumbotron: React.FC = () => {
   return (
     <section className="jumbotron" id="about">
-      <img src={headdshot} alt="Founder" className="jumbotron-image" />
+      <img
+        src={headdshot}
+        alt="Founder"
+        className="jumbotron-image headshot-photo"
+      />
       <div className="jumbotron-text">
         <h2>About Us</h2>
         <p>{aboutText}</p>

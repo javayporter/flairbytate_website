@@ -1,8 +1,9 @@
 import { useState } from "react";
-import "../styles/global.css"; // assuming all your CSS is in here
+import "../styles/global.css";
 
-// import sliderVid from "/Users/javayporter/react_flairbytate/public/videos/paxsys1.mp4";
-// import sliderVid1 from "/Users/javayporter/react_flairbytate/public/videos/paxsys2.mp4";
+// MUI Icons
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const videoSources = ["/videos/paxsys1.mp4", "/videos/paxsys2.mp4"];
 
@@ -25,7 +26,7 @@ const ImageSlider = () => {
     <section className="video-slider-section">
       <div className="video-slider-wrapper">
         <button className="nav-button left" onClick={goToPrev}>
-          &#8592;
+          <ChevronLeftIcon style={{ fontSize: 40, color: "#008080" }} />
         </button>
 
         <video
@@ -39,7 +40,7 @@ const ImageSlider = () => {
         />
 
         <button className="nav-button right" onClick={goToNext}>
-          &#8594;
+          <ChevronRightIcon style={{ fontSize: 40, color: "#008080" }} />
         </button>
       </div>
     </section>

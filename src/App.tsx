@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      <main className="container">
+      <main className="container" style={{ marginTop: "1.75rem" }}>
         <Jumbotron />
         <section id="home">
           <ImageSlider />
