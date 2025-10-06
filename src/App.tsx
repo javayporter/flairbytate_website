@@ -5,6 +5,7 @@ import ServiceCard from "./components/ServiceCard";
 import ContactSection from "./components/ContactSection";
 import ImageSlider from "./components/ImageSlider";
 import TravelInfo from "./components/TravelInfo";
+import HeroGallery from "./components/HeroGallery";
 
 // import BrandPillars from "./components/BrandPillars";
 import { services } from "./data/services";
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Navbar />
       <main className="container" style={{ marginTop: "1.75rem" }}>
         {/* <BrandPillars /> */}
+        <HeroGallery />
         <Jumbotron />
         <section id="home">
           <ImageSlider />
