@@ -1,13 +1,10 @@
 import React from "react";
+import headdshot from "../assets/headshot.jpg";
 
 const Jumbotron: React.FC = () => {
   return (
     <section className="jumbotron" id="about">
-      <img
-        src="src/assets/DSC_4432.JPG"
-        alt="Founder"
-        className="jumbotron-image"
-      />
+      <img src={headdshot} alt="Founder" className="jumbotron-image" />
       <div className="jumbotron-text">
         <h2>About Us</h2>
         <p>
