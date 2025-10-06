@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/global.css"; // assuming all your CSS is in here
 
 import sliderVid from "/Users/javayporter/react_flairbytate/public/videos/paxsys1.mp4";
