@@ -22,7 +22,7 @@ a {
   z-index: 1000;
 }
 
-.logo {
+/* .logo {
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -35,6 +35,73 @@ a {
 
 .navLinks li a {
   font-weight: 500;
+} */
+
+/* Navbar container */
+/* .navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+} */
+
+/* Flex container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Nav links */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #d1b280;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #008080;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    /* flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%; */
+    display: none;
+  }
+
+  .navbar-logo {
+    margin-bottom: 0.2rem;
+  }
 }
 
 /* Jumbotron */
