@@ -165,6 +165,7 @@ a {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #f9f9f9;
   flex-wrap: wrap; /* makes it responsive */
 }
 
@@ -225,8 +226,11 @@ a {
   padding: 0.5rem 1.5rem;
   background: #673147;
   color: white;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--body-font);
 }
 
 /* Contact Section */
@@ -355,4 +359,78 @@ a {
 .brand-pillars-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.travel-section {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.travel-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--heading-font);
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.travel-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.travel-text,
+.travel-locations {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.travel-text h3,
+.travel-text h4,
+.travel-locations h4 {
+  color: #008080;
+  font-family: var(--heading-font);
+}
+
+.travel-text p,
+.travel-locations p,
+.travel-locations li,
+.travel-text li {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: var(--body-font);
+  color: #444;
+}
+
+.travel-locations ul,
+.travel-text ul {
+  padding-left: 1.25rem;
+}
+
+.travel-button-wrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.travel-button {
+  background-color: #008080;
+  color: white;
+  border: none;
+  /* padding: 0.75rem 2rem; */
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--body-font);
+}
+
+.service-button:hover {
+  background-color: #006666;
 }

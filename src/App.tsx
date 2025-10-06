@@ -4,6 +4,8 @@ import Jumbotron from "./components/Jumbotron";
 import ServiceCard from "./components/ServiceCard";
 import ContactSection from "./components/ContactSection";
 import ImageSlider from "./components/ImageSlider";
+import TravelInfo from "./components/TravelInfo";
+
 // import BrandPillars from "./components/BrandPillars";
 import { services } from "./data/services";
 
@@ -22,6 +24,7 @@ const App: React.FC = () => {
             <ServiceCard key={i} {...service} />
           ))}
         </section>
+        <TravelInfo />
         <ContactSection />
       </main>
     </>
