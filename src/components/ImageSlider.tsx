@@ -5,7 +5,11 @@ import "../styles/global.css";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const videoSources = ["/videos/paxsys1.mp4", "/videos/paxsys2.mp4"];
+const videoSources = [
+  "/videos/paxsys1.mp4",
+  "/videos/paxsys2.mp4",
+  "/videos/patio.mp4",
+];
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
