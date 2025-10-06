@@ -1,32 +1,47 @@
-import React from "react";
-import Slider from "react-slick";
+import React, { useState } from "react";
+import "../styles/global.css"; // assuming all your CSS is in here
 
-const images = [
-  "/assets/slider1.jpg",
-  "/assets/slider2.jpg",
-  "/assets/slider3.jpg",
-];
+import sliderVid from "/Users/javayporter/react_flairbytate/public/videos/paxsys1.mp4";
+import sliderVid1 from "/Users/javayporter/react_flairbytate/public/videos/paxsys2.mp4";
 
-const ImageSlider: React.FC = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
+const videoSources = [sliderVid, sliderVid1];
+
+const ImageSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === videoSources.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToPrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? videoSources.length - 1 : prevIndex - 1
+    );
   };
 
   return (
-    <section className="slider-section">
-      <Slider {...settings}>
-        {images.map((src, idx) => (
-          <div key={idx}>
-            <img src={src} alt={`Slide ${idx + 1}`} className="slider-image" />
-          </div>
-        ))}
-      </Slider>
+    <section className="video-slider-section">
+      <div className="video-slider-wrapper">
+        <button className="nav-button left" onClick={goToPrev}>
+          &#8592;
+        </button>
+
+        <video
+          className="slider-video"
+          key={videoSources[currentIndex]} // forces reload when switching
+          src={videoSources[currentIndex]}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+
+        <button className="nav-button right" onClick={goToNext}>
+          &#8594;
+        </button>
+      </div>
     </section>
   );
 };

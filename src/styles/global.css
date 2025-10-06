@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", sans-serif;
   color: #222;
+  /* background-color: #673147; */
 }
 
 a {
@@ -13,8 +14,8 @@ a {
 .navbar {
   position: sticky;
   top: 0;
-  background-color: white;
   display: flex;
+  background-color: #673147;
   justify-content: space-between;
   padding: 1rem 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -60,6 +61,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   margin: 2rem 0;
   padding: 2rem;
   border: 1px solid #ddd;
@@ -89,7 +91,7 @@ a {
 .service-button {
   margin-top: 1rem;
   padding: 0.5rem 1.5rem;
-  background: black;
+  background: #673147;
   color: white;
   border: none;
   cursor: pointer;
@@ -124,4 +126,49 @@ a {
   height: 125px;
   width: auto;
   display: block;
+}
+
+.video-slider-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  background-color: #008080;
+}
+
+.video-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slider-video {
+  width: 400px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.nav-button {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+}
+
+.navbar.center-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }

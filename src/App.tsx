@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import ServiceCard from "./components/ServiceCard";
 import ContactSection from "./components/ContactSection";
-// import ImageSlider from "./components/ImageSlider";
+import ImageSlider from "./components/ImageSlider";
 import { services } from "./data/services";
 
 const App: React.FC = () => {
@@ -11,8 +11,10 @@ const App: React.FC = () => {
     <>
       <Navbar />
       <main className="container">
-        <section id="home">{/* <ImageSlider /> */}</section>
         <Jumbotron />
+        <section id="home">
+          <ImageSlider />
+        </section>
         <section id="services" style={{ padding: "2rem" }}>
           {services.map((service, i) => (
             <ServiceCard key={i} {...service} />

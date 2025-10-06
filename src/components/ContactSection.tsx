@@ -5,8 +5,8 @@ const ContactSection: React.FC = () => {
     <section className="contact-section" id="contact">
       <h2>Contact Us</h2>
       {/* <p>📞 Phone: (123) 456-7890</p> */}
-      <p>📧 Email: designs@luxdesign.com</p>
-      <p>
+      <p>📧 Email: designs@flairbytate.com</p>
+      {/* <p>
         🌐 Follow us:
         <a
           href="https://instagram.com"
@@ -25,7 +25,7 @@ const ContactSection: React.FC = () => {
           {" "}
           Facebook
         </a>
-      </p>
+      </p> */}
     </section>
   );
 };
