@@ -31,13 +31,13 @@ const TravelInfo = () => {
           <h4>Estimated Travel Fees:</h4>
           <ul>
             <li>
-              <strong>New York / New Jersey:</strong> $500–$800
+              <strong>New York / New Jersey:</strong> $350–$600
             </li>
             <li>
-              <strong>Washington, D.C.:</strong> $400–$600
+              <strong>Washington, D.C.:</strong> $250–$500
             </li>
             <li>
-              <strong>Florida:</strong> $300–$600
+              <strong>Florida:</strong> $200–$400
             </li>
             <li>
               <strong>Other locations:</strong> Reach out for a custom quote.
