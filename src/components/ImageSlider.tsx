@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "../styles/global.css"; // assuming all your CSS is in here
 
-import sliderVid from "/Users/javayporter/react_flairbytate/public/videos/paxsys1.mp4";
-import sliderVid1 from "/Users/javayporter/react_flairbytate/public/videos/paxsys2.mp4";
+// import sliderVid from "/Users/javayporter/react_flairbytate/public/videos/paxsys1.mp4";
+// import sliderVid1 from "/Users/javayporter/react_flairbytate/public/videos/paxsys2.mp4";
 
-const videoSources = [sliderVid, sliderVid1];
+const videoSources = ["/videos/paxsys1.mp4", "/videos/paxsys2.mp4"];
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
