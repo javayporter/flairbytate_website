@@ -9,6 +9,8 @@ const videoSources = [
   "/videos/paxdesign.mp4",
   "/videos/patio.mp4",
   "/videos/paxsys1.mp4",
+  "/videos/bathroom.mp4",
+  "/videos/office.mp4",
 ];
 
 const ImageSlider = () => {
