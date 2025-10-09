@@ -8,10 +8,10 @@ const ContactSection: React.FC = () => {
     <section className="contact-section" id="contact">
       <h2>Contact Us</h2>
       <div className="contact-container">
-        <a href="tel:+1234567890" className="phone-link">
+        <a href="tel:+16782479494" className="phone-link">
           📞 Phone: {phoneNumber}
         </a>
-        <a href="mailto:hello@example.com" className="email-link">
+        <a href="mailto:designs@flairbytate.com" className="email-link">
           📧 Email: {email}
         </a>
         {/* <p>
