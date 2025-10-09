@@ -4,7 +4,7 @@ const ContactSection: React.FC = () => {
   return (
     <section className="contact-section" id="contact">
       <h2>Contact Us</h2>
-      {/* <p>📞 Phone: (123) 456-7890</p> */}
+      <p>📞 Phone: (678) 247-9494</p>
       <p>📧 Email: designs@flairbytate.com</p>
       {/* <p>
         🌐 Follow us:
