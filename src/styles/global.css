@@ -555,3 +555,35 @@ a {
     max-width: 100%;
   }
 }
+
+.swipe-hint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  animation: fadeOut 7s ease-in forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 769px) {
+  .swipe-hint {
+    display: none;
+  }
+}
