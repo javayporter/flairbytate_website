@@ -288,6 +288,7 @@ a {
 
 .video-slider-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 4rem 0;
   /* background-color: #008080;
@@ -556,34 +557,52 @@ a {
   }
 }
 
-.swipe-hint {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  animation: fadeOut 7s ease-in forwards;
+.swipe-hint-text {
+  display: none;
 }
 
-@keyframes fadeOut {
+@keyframes swipeHint {
   0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  20% {
     opacity: 1;
+    transform: translateY(0);
   }
   80% {
     opacity: 1;
+    transform: translateY(0); /* stay visible most of the time */
   }
   100% {
     opacity: 0;
-    visibility: hidden;
+    transform: translateY(-4px);
   }
 }
 
-@media (min-width: 769px) {
-  .swipe-hint {
-    display: none;
+@media (max-width: 768px) {
+  .swipe-hint-text {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    animation: swipeHint 7.5s ease-in-out infinite; /* loop animation */
+  }
+}
+
+@media (max-width: 768px) {
+  /* .swipe-hint-text {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+  } */
+
+  .video-slider-section {
+    padding: 2rem 0;
   }
 }
