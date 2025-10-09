@@ -606,3 +606,39 @@ a {
     padding: 2rem 0;
   }
 }
+
+.phone-link {
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+  color: #006666;
+}
+
+.email-link {
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #006666;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 0.5rem; /* spacing between links */
+  align-items: center; /* optional: left align text */
+}
+
+/* Optional: center on mobile */
+@media (max-width: 768px) {
+  .contact-container {
+    align-items: center;
+  }
+}

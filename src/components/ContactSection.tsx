@@ -7,9 +7,14 @@ const ContactSection: React.FC = () => {
   return (
     <section className="contact-section" id="contact">
       <h2>Contact Us</h2>
-      <p>📞 Phone: {phoneNumber}</p>
-      <p>📧 Email: {email}</p>
-      {/* <p>
+      <div className="contact-container">
+        <a href="tel:+1234567890" className="phone-link">
+          📞 Phone: {phoneNumber}
+        </a>
+        <a href="mailto:hello@example.com" className="email-link">
+          📧 Email: {email}
+        </a>
+        {/* <p>
         🌐 Follow us:
         <a
           href="https://instagram.com"
@@ -29,6 +34,7 @@ const ContactSection: React.FC = () => {
           Facebook
         </a>
       </p> */}
+      </div>
     </section>
   );
 };
