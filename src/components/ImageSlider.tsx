@@ -1,10 +1,19 @@
-//
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/global.css";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const videoSources = [
+// Types
+interface ImageSliderProps {
+  videoSources?: string[];
+  swipeThreshold?: number;
+  iconColor?: string;
+  iconSize?: number;
+  showSwipeHint?: boolean;
+}
+
+// Defaults
+const DEFAULT_VIDEO_SOURCES = [
   "/videos/paxdesign.mp4",
   "/videos/patio.mp4",
   "/videos/paxsys1.mp4",
@@ -12,22 +21,30 @@ const videoSources = [
   "/videos/office.mp4",
 ];
 
-const SWIPE_THRESHOLD = 50; // pixels to trigger a swipe
+const DEFAULT_SWIPE_THRESHOLD = 50;
+const DEFAULT_ICON_COLOR = "#008080";
+const DEFAULT_ICON_SIZE = 40;
 
-const ImageSlider = () => {
+const ImageSlider: React.FC<ImageSliderProps> = ({
+  videoSources = DEFAULT_VIDEO_SOURCES,
+  swipeThreshold = DEFAULT_SWIPE_THRESHOLD,
+  iconColor = DEFAULT_ICON_COLOR,
+  iconSize = DEFAULT_ICON_SIZE,
+  showSwipeHint = true,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === videoSources.length - 1 ? 0 : prevIndex + 1
+    setCurrentIndex((prev) =>
+      prev === videoSources.length - 1 ? 0 : prev + 1
     );
   };
 
   const goToPrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? videoSources.length - 1 : prevIndex - 1
+    setCurrentIndex((prev) =>
+      prev === 0 ? videoSources.length - 1 : prev - 1
     );
   };
 
@@ -43,16 +60,12 @@ const ImageSlider = () => {
     if (
       touchStartX.current !== null &&
       touchEndX.current !== null &&
-      Math.abs(touchStartX.current - touchEndX.current) > SWIPE_THRESHOLD
+      Math.abs(touchStartX.current - touchEndX.current) > swipeThreshold
     ) {
-      if (touchStartX.current > touchEndX.current) {
-        goToNext(); // Swipe left → next
-      } else {
-        goToPrev(); // Swipe right → previous
-      }
+      touchStartX.current > touchEndX.current ? goToNext() : goToPrev();
     }
 
-    // reset refs
+    // Reset refs
     touchStartX.current = null;
     touchEndX.current = null;
   };
@@ -61,11 +74,8 @@ const ImageSlider = () => {
     <section className="video-slider-section">
       <div className="video-slider-wrapper">
         {/* Desktop-only buttons */}
-        <button className="nav-button left">
-          <ChevronLeftIcon
-            style={{ fontSize: 40, color: "#008080" }}
-            onClick={goToPrev}
-          />
+        <button className="nav-button left" onClick={goToPrev}>
+          <ChevronLeftIcon style={{ fontSize: iconSize, color: iconColor }} />
         </button>
 
         <video
@@ -81,15 +91,15 @@ const ImageSlider = () => {
           onTouchEnd={handleTouchEnd}
         />
 
-        <button className="nav-button right">
-          <ChevronRightIcon
-            style={{ fontSize: 40, color: "#008080" }}
-            onClick={goToNext}
-          />
+        <button className="nav-button right" onClick={goToNext}>
+          <ChevronRightIcon style={{ fontSize: iconSize, color: iconColor }} />
         </button>
       </div>
-      {/* 👇 Mobile-only text hint */}
-      <p className="swipe-hint-text">👆 Swipe left to see more videos</p>
+
+      {/* 👇 Optional mobile-only hint */}
+      {showSwipeHint && (
+        <p className="swipe-hint-text">👆 Swipe left to see more videos</p>
+      )}
     </section>
   );
 };
