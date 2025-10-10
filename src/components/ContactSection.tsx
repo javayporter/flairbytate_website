@@ -1,39 +1,45 @@
 import React from "react";
 
-const phoneNumber = "(678) 247-9494";
-const email = "designs@flairbytate.com";
+interface ContactSectionProps {
+  phoneNumber?: string;
+  email?: string;
+  title?: string;
+  showIcons?: boolean;
+  className?: string;
+}
 
-const ContactSection: React.FC = () => {
+const ContactSection: React.FC<ContactSectionProps> = ({
+  phoneNumber = "(678) 247-9494",
+  email = "designs@flairbytate.com",
+  title = "Contact Us",
+  showIcons = true,
+  className = "",
+}) => {
+  const formattedPhoneHref = `tel:${phoneNumber.replace(/\D/g, "")}`;
+  const emailHref = `mailto:${email}`;
+
   return (
-    <section className="contact-section" id="contact">
-      <h2>Contact Us</h2>
+    <section className={`contact-section ${className}`} id="contact">
+      <h2 className="contact-title">{title}</h2>
+
       <div className="contact-container">
-        <a href="tel:+16782479494" className="phone-link">
-          📞 Phone: {phoneNumber}
+        <a href={formattedPhoneHref} className="contact-link phone-link">
+          {showIcons && (
+            <span role="img" aria-label="phone">
+              📞
+            </span>
+          )}{" "}
+          {phoneNumber}
         </a>
-        <a href="mailto:designs@flairbytate.com" className="email-link">
-          📧 Email: {email}
+
+        <a href={emailHref} className="contact-link email-link">
+          {showIcons && (
+            <span role="img" aria-label="email">
+              📧
+            </span>
+          )}{" "}
+          {email}
         </a>
-        {/* <p>
-        🌐 Follow us:
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          Instagram
-        </a>{" "}
-        |
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          Facebook
-        </a>
-      </p> */}
       </div>
     </section>
   );
