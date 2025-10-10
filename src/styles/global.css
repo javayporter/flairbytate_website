@@ -747,7 +747,7 @@ a {
 /* Mobile behavior */
 @media (max-width: 768px) {
   .social-sidebar {
-    top: auto;
+    /* top: auto;
     bottom: 1rem;
     left: auto;
     right: 1rem;
@@ -755,7 +755,8 @@ a {
     flex-direction: row;
     border-radius: 8px;
     padding: 0.5rem 1rem;
-    transform: translateX(0); /* always collapsed style is horizontal */
+    transform: translateX(0);  */
+    display: none;
   }
 
   .social-sidebar.collapsed .social-icons {
@@ -771,4 +772,28 @@ a {
     flex-direction: row;
     gap: 0.5rem;
   }
+}
+
+.social-inline {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* spacing between icons */
+  margin-top: 0.5rem; /* optional spacing from phone/email */
+}
+
+.social-inline .social-link {
+  font-size: 1.5rem; /* controls icon size */
+  color: #006666;
+  transition: color 0.3s ease;
+}
+
+.social-inline .social-link:hover {
+  color: #008080;
+}
+
+.social-divider {
+  width: 1px;
+  background-color: #673147;
+  height: 22px; /* match icon height */
+  margin: 0 0.25rem; /* optional padding around divider */
 }
