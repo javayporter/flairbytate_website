@@ -1,4 +1,4 @@
-# CLient Website - Flair By Tate 
+# Client Website - Flair By Tate 
 
 A custom website built for a space curator to establish a professional online presence, showcase services, and provide a central hub for connecting with current and prospective clients.
 
