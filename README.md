@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# Flair By Tate Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A custom website built for a space curator to establish a professional online presence, showcase services, and provide a central hub for connecting with current and prospective clients.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The client needed a modern, easy-to-manage website that could communicate their brand, highlight their services, and provide a streamlined way for visitors to learn more about their work and make contact.
 
-## React Compiler
+The site was designed with both user experience and maintainability in mind, allowing content to be updated without requiring ongoing developer involvement.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Responsive design for desktop, tablet, and mobile devices
+- Modern React and TypeScript architecture
+- Reusable component-based design
+- Content management integration
+- Contact and inquiry workflows
+- SEO-friendly structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- TypeScript
+- HTML
+- CSS
+- CMS Integration
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## My Contributions
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Gathered requirements and translated business needs into technical solutions
+- Designed and developed the frontend application
+- Built reusable UI components
+- Integrated content management capabilities
+- Optimized the site for responsiveness and usability
+- Deployed and maintained the production website
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Key Outcomes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Established a professional online presence for the client
+- Improved accessibility of business information for prospective customers
+- Enabled easier content updates and long-term maintainability
+- Created a reusable foundation for future enhancements
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Lessons Learned
+
+This project strengthened my experience in:
+
+- Client-facing development
+- Requirements gathering
+- Frontend architecture
+- Responsive design
+- CMS integrations
+- Delivering production-ready web applications
+
+## Future Enhancements
+
+- Expanded content management capabilities
+- Analytics integration
+- Additional lead generation workflows
+- Performance and SEO improvements
